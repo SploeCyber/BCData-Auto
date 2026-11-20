@@ -67,7 +67,9 @@ for cc, cc_versions in versions.items():
             exit(1)
         url = base_url + version
 
-        resp = requests.head(url)
+        # GitHub release URLs 302-redirect to the asset CDN; follow redirects
+        # so HEAD resolves to the actual file (upstream Forgejo serves 200 directly).
+        resp = requests.head(url, allow_redirects=True)
         if resp.status_code != 200:
             print(
                 f"Error: response for url: {url} for {cc} for {game_version} returned {resp.status_code}, expected 200!"
