@@ -1,0 +1,17 @@
+{
+  "versions": {
+    "en": {
+      "15.7.0": "v15.7.0-en-kr-tw/en-15.7.0.tar.xz"
+    },
+    "kr": {
+      "15.7.0": "v15.7.0-en-kr-tw/kr-15.7.0.tar.xz"
+    },
+    "tw": {
+      "15.7.0": "v15.7.0-en-kr-tw/tw-15.7.0.tar.xz"
+    },
+    "jp": {
+      "16.0.3": "v16.0.3-jp/jp-16.0.3.tar.xz"
+    }
+  },
+  "base_url": "https://github.com/SploeCyber/BCData-Auto/releases/download/"
+}
