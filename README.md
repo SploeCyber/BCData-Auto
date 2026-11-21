@@ -12,14 +12,20 @@ and publishes a release with the compressed archives — fully automatically.
 
 Pipeline (per region, only when a new version is detected):
 
-1. [`apkdown`](https://codeberg.org/fieryhenry/apkdown) — get latest version + download the APK from APKPure
-2. [APKEditor](https://github.com/REAndroid/APKEditor) — merge split APKs into one APK
-3. [`tbctk-cli`](https://codeberg.org/fieryhenry/tbctk) — extract/decrypt `DataLocal` + `resLocal` packs into `game_data/<cc>/<version>/`
+1. [`apkdown`](https://github.com/SploeCyber/apkdown) — get latest version + download the APK from APKPure
+2. [APKEditor](https://github.com/REAndroid/APKEditor) — merge split APKs into one APK (jar committed in `lib/`)
+3. [`tbctk-cli`](https://github.com/SploeCyber/tbctk) — extract/decrypt `DataLocal` + `resLocal` packs into `game_data/<cc>/<version>/`
 4. `tar.xz` — compress into `<cc>-<version>.tar.xz`
 5. commit + tag `v<version>-<regions>` + GitHub release with the archives
 6. update [`metadata.json`](metadata.json) (points at this repo's releases)
 
 `metadata.json` starts at the latest version — old versions are not backfilled.
+
+The Rust tools are installed from GitHub forks
+([apkdown](https://github.com/SploeCyber/apkdown),
+[tbctk](https://github.com/SploeCyber/tbctk) `build-fix` branch,
+[bccsv](https://github.com/SploeCyber/bccsv)), so updates keep working even
+if the original repositories disappear.
 
 ## Using with BCSFE
 
@@ -54,6 +60,7 @@ Trigger the cloud workflow: **Actions → Update game data → Run workflow**
 | `regions.json` | region → package name + packs config |
 | `update.py` | the updater orchestrator |
 | `scripts/setup_tools.sh` | tool installer (local + CI) |
+| `lib/APKEditor.jar` | APK merge tool (committed; no download needed) |
 | `.github/workflows/update.yml` | daily scheduled auto-update |
 
 ## Credits

@@ -23,7 +23,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  TOOL_CACHE_VERSION: v1 # bump to force a rebuild of the Rust tools
+  TOOL_CACHE_VERSION: v2 # bump to force a rebuild of the Rust tools
 
 jobs:
   update:
