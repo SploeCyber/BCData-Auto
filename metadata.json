@@ -1,13 +1,16 @@
 {
   "versions": {
     "en": {
-      "15.7.0": "v15.7.0-en-kr-tw/en-15.7.0.tar.xz"
+      "15.7.0": "v15.7.0-en-kr-tw/en-15.7.0.tar.xz",
+      "15.7.1": "v15.7.1-en-kr-tw/en-15.7.1.tar.xz"
     },
     "kr": {
-      "15.7.0": "v15.7.0-en-kr-tw/kr-15.7.0.tar.xz"
+      "15.7.0": "v15.7.0-en-kr-tw/kr-15.7.0.tar.xz",
+      "15.7.1": "v15.7.1-en-kr-tw/kr-15.7.1.tar.xz"
     },
     "tw": {
-      "15.7.0": "v15.7.0-en-kr-tw/tw-15.7.0.tar.xz"
+      "15.7.0": "v15.7.0-en-kr-tw/tw-15.7.0.tar.xz",
+      "15.7.1": "v15.7.1-en-kr-tw/tw-15.7.1.tar.xz"
     },
     "jp": {
       "16.0.3": "v16.0.3-jp/jp-16.0.3.tar.xz"
