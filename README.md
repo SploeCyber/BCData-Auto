@@ -1,7 +1,6 @@
 # BCData-Auto
 
-Self-updating collection of game data for **The Battle Cats** (en / jp / kr / tw),
-usable with [BCSFE-Python](https://codeberg.org/fieryhenry/BCSFE-Python).
+Self-updating collection of game data for **The Battle Cats** (en / jp / kr / tw).
 
 Unlike a static mirror, this repo updates **itself**: a scheduled GitHub
 Actions workflow checks APKPure for new game versions every day, and when a
@@ -13,7 +12,7 @@ and publishes a release with the compressed archives — fully automatically.
 Pipeline (per region, only when a new version is detected):
 
 1. [`apkdown`](https://github.com/SploeCyber/apkdown) — get latest version + download the APK from APKPure
-2. [APKEditor](https://github.com/REAndroid/APKEditor) — merge split APKs into one APK (jar committed in `lib/`)
+2. [`APKEditor`](https://github.com/REAndroid/APKEditor) — merge split APKs into one APK (jar committed in `lib/`)
 3. [`tbctk-cli`](https://github.com/SploeCyber/tbctk) — extract/decrypt `DataLocal` + `resLocal` packs into `game_data/<cc>/<version>/`
 4. `tar.xz` — compress into `<cc>-<version>.tar.xz`
 5. commit + tag `v<version>-<regions>` + GitHub release with the archives
